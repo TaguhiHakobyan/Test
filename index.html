@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>My API</title>
 
     <style media="screen">
       .highlight table td { padding: 5px; }
@@ -286,12 +286,9 @@
     <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
       <script src="javascripts/all-a9fde460.js"></script>
 
-    <script>
-      $(function() { setupCodeCopy(); });
-    </script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -302,9 +299,6 @@
       <img src="images/logo-1e815a84.png" class="logo" alt="" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -315,19 +309,426 @@
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#api-betongamescms-getenvironment" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETENVIRONMENT">/API/BETONGAMESCMS/GETENVIRONMENT</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#get" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
                   </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-addactivategame" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/ADDACTIVATEGAME">/API/BETONGAMESCMS/ADDACTIVATEGAME</a>
+              <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#post" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
                   </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-getpartnergroups" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETPARTNERGROUPS">/API/BETONGAMESCMS/GETPARTNERGROUPS</a>
+              <ul class="toc-list-h2">
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#get-2" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-editgame" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/EDITGAME">/API/BETONGAMESCMS/EDITGAME</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-2" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-addpartner" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/ADDPARTNER">/API/BETONGAMESCMS/ADDPARTNER</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-3" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-editpartner" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/EDITPARTNER">/API/BETONGAMESCMS/EDITPARTNER</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-4" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-allpartnerunderconstraction" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/ALLPARTNERUNDERCONSTRACTION">/API/BETONGAMESCMS/ALLPARTNERUNDERCONSTRACTION</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-5" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-editorremovepartnerunderconstruction" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/EDITORREMOVEPARTNERUNDERCONSTRUCTION">/API/BETONGAMESCMS/EDITORREMOVEPARTNERUNDERCONSTRUCTION</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-6" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-addgamesorpartnertoundercounstruction" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/ADDGAMESORPARTNERTOUNDERCOUNSTRUCTION">/API/BETONGAMESCMS/ADDGAMESORPARTNERTOUNDERCOUNSTRUCTION</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-7" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-getallactivegames" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETALLACTIVEGAMES">/API/BETONGAMESCMS/GETALLACTIVEGAMES</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-8" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-getpartnersinfo" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETPARTNERSINFO">/API/BETONGAMESCMS/GETPARTNERSINFO</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-9" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-getbetlogs" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETBETLOGS">/API/BETONGAMESCMS/GETBETLOGS</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-10" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-getbetlogsreport" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETBETLOGSREPORT">/API/BETONGAMESCMS/GETBETLOGSREPORT</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-11" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-getgamelist" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETGAMELIST">/API/BETONGAMESCMS/GETGAMELIST</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-12" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-getgamelistreport" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETGAMELISTREPORT">/API/BETONGAMESCMS/GETGAMELISTREPORT</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-13" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-gettirageinfodetails" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETTIRAGEINFODETAILS">/API/BETONGAMESCMS/GETTIRAGEINFODETAILS</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-14" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-gettirageinfotickets" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETTIRAGEINFOTICKETS">/API/BETONGAMESCMS/GETTIRAGEINFOTICKETS</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-15" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-getallpartnersinfo" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETALLPARTNERSINFO">/API/BETONGAMESCMS/GETALLPARTNERSINFO</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-16" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-getpartnercurrencies" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETPARTNERCURRENCIES">/API/BETONGAMESCMS/GETPARTNERCURRENCIES</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-3" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-getplayersgame" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETPLAYERSGAME">/API/BETONGAMESCMS/GETPLAYERSGAME</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-17" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-getplayersgamereport" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETPLAYERSGAMEREPORT">/API/BETONGAMESCMS/GETPLAYERSGAMEREPORT</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-18" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-getplayertickets" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETPLAYERTICKETS">/API/BETONGAMESCMS/GETPLAYERTICKETS</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-19" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-getplayerticketsreport" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETPLAYERTICKETSREPORT">/API/BETONGAMESCMS/GETPLAYERTICKETSREPORT</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-20" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-getallplayertickets" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETALLPLAYERTICKETS">/API/BETONGAMESCMS/GETALLPLAYERTICKETS</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-21" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-getallplayerticketsreport" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETALLPLAYERTICKETSREPORT">/API/BETONGAMESCMS/GETALLPLAYERTICKETSREPORT</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-22" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-getgamekindidbypartnerid" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETGAMEKINDIDBYPARTNERID">/API/BETONGAMESCMS/GETGAMEKINDIDBYPARTNERID</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-23" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-addactivegamegroups" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/ADDACTIVEGAMEGROUPS">/API/BETONGAMESCMS/ADDACTIVEGAMEGROUPS</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-24" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-editactivegamegroups" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/EDITACTIVEGAMEGROUPS">/API/BETONGAMESCMS/EDITACTIVEGAMEGROUPS</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-25" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-getactivegamegroups" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETACTIVEGAMEGROUPS">/API/BETONGAMESCMS/GETACTIVEGAMEGROUPS</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-26" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-getallpartnercurrencies" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETALLPARTNERCURRENCIES">/API/BETONGAMESCMS/GETALLPARTNERCURRENCIES</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-27" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-getrateproviders" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETRATEPROVIDERS">/API/BETONGAMESCMS/GETRATEPROVIDERS</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-28" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-getpartnerdomains" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETPARTNERDOMAINS">/API/BETONGAMESCMS/GETPARTNERDOMAINS</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-4" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-getactivegameinfo" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETACTIVEGAMEINFO">/API/BETONGAMESCMS/GETACTIVEGAMEINFO</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-5" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-updatepartnerdomains" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/UPDATEPARTNERDOMAINS">/API/BETONGAMESCMS/UPDATEPARTNERDOMAINS</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-29" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-deletepartnerdomain" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/DELETEPARTNERDOMAIN">/API/BETONGAMESCMS/DELETEPARTNERDOMAIN</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-30" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-deletepartnerdomainbyname" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/DELETEPARTNERDOMAINBYNAME">/API/BETONGAMESCMS/DELETEPARTNERDOMAINBYNAME</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-31" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-addpartnerdomain" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/ADDPARTNERDOMAIN">/API/BETONGAMESCMS/ADDPARTNERDOMAIN</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-32" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-addpartnerdomainbyname" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/ADDPARTNERDOMAINBYNAME">/API/BETONGAMESCMS/ADDPARTNERDOMAINBYNAME</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-33" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-getresources" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETRESOURCES">/API/BETONGAMESCMS/GETRESOURCES</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-34" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-updateresources" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/UPDATERESOURCES">/API/BETONGAMESCMS/UPDATERESOURCES</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-35" class="toc-h2 toc-link" data-title="POST"><strong><em>POST</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-getallgametypes" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETALLGAMETYPES">/API/BETONGAMESCMS/GETALLGAMETYPES</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-6" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-getallgamenames" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETALLGAMENAMES">/API/BETONGAMESCMS/GETALLGAMENAMES</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-7" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#api-betongamescms-getallpartnersminbet" class="toc-h1 toc-link" data-title="/API/BETONGAMESCMS/GETALLPARTNERSMINBET">/API/BETONGAMESCMS/GETALLPARTNERSMINBET</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-8" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#cacheinitcontroller-updatecrashcache" class="toc-h1 toc-link" data-title="/CACHEINITCONTROLLER/UPDATECRASHCACHE">/CACHEINITCONTROLLER/UPDATECRASHCACHE</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-9" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#cacheinitcontroller-updatekenoexpresscache" class="toc-h1 toc-link" data-title="/CACHEINITCONTROLLER/UPDATEKENOEXPRESSCACHE">/CACHEINITCONTROLLER/UPDATEKENOEXPRESSCACHE</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-10" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#cacheinitcontroller-updatekenocache" class="toc-h1 toc-link" data-title="/CACHEINITCONTROLLER/UPDATEKENOCACHE">/CACHEINITCONTROLLER/UPDATEKENOCACHE</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-11" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#cacheinitcontroller-updatehilocache" class="toc-h1 toc-link" data-title="/CACHEINITCONTROLLER/UPDATEHILOCACHE">/CACHEINITCONTROLLER/UPDATEHILOCACHE</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-12" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#cacheinitcontroller-updatepenaltycache" class="toc-h1 toc-link" data-title="/CACHEINITCONTROLLER/UPDATEPENALTYCACHE">/CACHEINITCONTROLLER/UPDATEPENALTYCACHE</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-13" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#cacheinitcontroller-updatesicbocache" class="toc-h1 toc-link" data-title="/CACHEINITCONTROLLER/UPDATESICBOCACHE">/CACHEINITCONTROLLER/UPDATESICBOCACHE</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-14" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#cacheinitcontroller-updateglobalinfocache" class="toc-h1 toc-link" data-title="/CACHEINITCONTROLLER/UPDATEGLOBALINFOCACHE">/CACHEINITCONTROLLER/UPDATEGLOBALINFOCACHE</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-15" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#cacheinitcontroller-updatepartnerdomains" class="toc-h1 toc-link" data-title="/CACHEINITCONTROLLER/UPDATEPARTNERDOMAINS">/CACHEINITCONTROLLER/UPDATEPARTNERDOMAINS</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-16" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#cacheinitcontroller-updatemaxwinners" class="toc-h1 toc-link" data-title="/CACHEINITCONTROLLER/UPDATEMAXWINNERS">/CACHEINITCONTROLLER/UPDATEMAXWINNERS</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-17" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#cacheinitcontroller-init" class="toc-h1 toc-link" data-title="/CACHEINITCONTROLLER/INIT">/CACHEINITCONTROLLER/INIT</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-18" class="toc-h2 toc-link" data-title="GET"><strong><em>GET</em></strong></a>
                   </li>
               </ul>
           </li>
@@ -337,191 +738,884 @@
       </ul>
         <ul class="toc-footer">
             <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a></li>
+            <li><a href='https://github.com/lavkumarv'>Documentation Powered by lav</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<p><strong>Version:</strong> v1 </p>
+<h1 id='api-betongamescms-getenvironment'>/API/BETONGAMESCMS/GETENVIRONMENT</h1><h2 id='get'><strong><em>GET</em></strong></h2><h3 id='http-request'>HTTP Request</h3>
+<p><code>***GET*** /api/BetOnGamesCms/GetEnvironment</code> </p>
 
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p><strong>Responses</strong></p>
 
-<p>This example API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
-
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Default</th>
+<th>Code</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>200</td>
+<td>Success</td>
 </tr>
 </tbody></table>
+<h1 id='api-betongamescms-addactivategame'>/API/BETONGAMESCMS/ADDACTIVATEGAME</h1><h2 id='post'><strong><em>POST</em></strong></h2><h3 id='http-request-2'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/AddActivateGame</code> </p>
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<p><strong>Responses</strong></p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
+<th>Code</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td>200</td>
+<td>Success</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h1 id='api-betongamescms-getpartnergroups'>/API/BETONGAMESCMS/GETPARTNERGROUPS</h1><h2 id='get-2'><strong><em>GET</em></strong></h2><h3 id='http-request-3'>HTTP Request</h3>
+<p><code>***GET*** /api/BetOnGamesCms/GetPartnerGroups</code> </p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p><strong>Responses</strong></p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span> <span class="se">\</span>
-  <span class="nt">-X</span> DELETE <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
+<th>Code</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td>200</td>
+<td>Success</td>
 </tr>
 </tbody></table>
+<h1 id='api-betongamescms-editgame'>/API/BETONGAMESCMS/EDITGAME</h1><h2 id='post-2'><strong><em>POST</em></strong></h2><h3 id='http-request-4'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/EditGame</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-addpartner'>/API/BETONGAMESCMS/ADDPARTNER</h1><h2 id='post-3'><strong><em>POST</em></strong></h2><h3 id='http-request-5'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/AddPartner</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-editpartner'>/API/BETONGAMESCMS/EDITPARTNER</h1><h2 id='post-4'><strong><em>POST</em></strong></h2><h3 id='http-request-6'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/EditPartner</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-allpartnerunderconstraction'>/API/BETONGAMESCMS/ALLPARTNERUNDERCONSTRACTION</h1><h2 id='post-5'><strong><em>POST</em></strong></h2><h3 id='http-request-7'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/AllPartnerUnderConstraction</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-editorremovepartnerunderconstruction'>/API/BETONGAMESCMS/EDITORREMOVEPARTNERUNDERCONSTRUCTION</h1><h2 id='post-6'><strong><em>POST</em></strong></h2><h3 id='http-request-8'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/EditOrRemovePartnerUnderConstruction</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-addgamesorpartnertoundercounstruction'>/API/BETONGAMESCMS/ADDGAMESORPARTNERTOUNDERCOUNSTRUCTION</h1><h2 id='post-7'><strong><em>POST</em></strong></h2><h3 id='http-request-9'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/AddGamesOrPartnerToUnderCounstruction</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-getallactivegames'>/API/BETONGAMESCMS/GETALLACTIVEGAMES</h1><h2 id='post-8'><strong><em>POST</em></strong></h2><h3 id='http-request-10'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/GetAllActiveGames</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-getpartnersinfo'>/API/BETONGAMESCMS/GETPARTNERSINFO</h1><h2 id='post-9'><strong><em>POST</em></strong></h2><h3 id='http-request-11'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/GetPartnersInfo</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-getbetlogs'>/API/BETONGAMESCMS/GETBETLOGS</h1><h2 id='post-10'><strong><em>POST</em></strong></h2><h3 id='http-request-12'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/GetBetLogs</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-getbetlogsreport'>/API/BETONGAMESCMS/GETBETLOGSREPORT</h1><h2 id='post-11'><strong><em>POST</em></strong></h2><h3 id='http-request-13'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/GetBetLogsReport</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-getgamelist'>/API/BETONGAMESCMS/GETGAMELIST</h1><h2 id='post-12'><strong><em>POST</em></strong></h2><h3 id='http-request-14'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/GetGameList</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-getgamelistreport'>/API/BETONGAMESCMS/GETGAMELISTREPORT</h1><h2 id='post-13'><strong><em>POST</em></strong></h2><h3 id='http-request-15'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/GetGameListReport</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-gettirageinfodetails'>/API/BETONGAMESCMS/GETTIRAGEINFODETAILS</h1><h2 id='post-14'><strong><em>POST</em></strong></h2><h3 id='http-request-16'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/GetTirageInfoDetails</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-gettirageinfotickets'>/API/BETONGAMESCMS/GETTIRAGEINFOTICKETS</h1><h2 id='post-15'><strong><em>POST</em></strong></h2><h3 id='http-request-17'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/GetTirageInfoTickets</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-getallpartnersinfo'>/API/BETONGAMESCMS/GETALLPARTNERSINFO</h1><h2 id='post-16'><strong><em>POST</em></strong></h2><h3 id='http-request-18'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/GetAllPartnersInfo</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-getpartnercurrencies'>/API/BETONGAMESCMS/GETPARTNERCURRENCIES</h1><h2 id='get-3'><strong><em>GET</em></strong></h2><h3 id='http-request-19'>HTTP Request</h3>
+<p><code>***GET*** /api/BetOnGamesCms/GetPartnerCurrencies</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-getplayersgame'>/API/BETONGAMESCMS/GETPLAYERSGAME</h1><h2 id='post-17'><strong><em>POST</em></strong></h2><h3 id='http-request-20'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/GetPlayersGame</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-getplayersgamereport'>/API/BETONGAMESCMS/GETPLAYERSGAMEREPORT</h1><h2 id='post-18'><strong><em>POST</em></strong></h2><h3 id='http-request-21'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/GetPlayersGameReport</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-getplayertickets'>/API/BETONGAMESCMS/GETPLAYERTICKETS</h1><h2 id='post-19'><strong><em>POST</em></strong></h2><h3 id='http-request-22'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/GetPlayerTickets</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-getplayerticketsreport'>/API/BETONGAMESCMS/GETPLAYERTICKETSREPORT</h1><h2 id='post-20'><strong><em>POST</em></strong></h2><h3 id='http-request-23'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/GetPlayerTicketsReport</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-getallplayertickets'>/API/BETONGAMESCMS/GETALLPLAYERTICKETS</h1><h2 id='post-21'><strong><em>POST</em></strong></h2><h3 id='http-request-24'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/GetAllPlayerTickets</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-getallplayerticketsreport'>/API/BETONGAMESCMS/GETALLPLAYERTICKETSREPORT</h1><h2 id='post-22'><strong><em>POST</em></strong></h2><h3 id='http-request-25'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/GetAllPlayerTicketsReport</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-getgamekindidbypartnerid'>/API/BETONGAMESCMS/GETGAMEKINDIDBYPARTNERID</h1><h2 id='post-23'><strong><em>POST</em></strong></h2><h3 id='http-request-26'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/GetGameKindIdByPartnerId</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-addactivegamegroups'>/API/BETONGAMESCMS/ADDACTIVEGAMEGROUPS</h1><h2 id='post-24'><strong><em>POST</em></strong></h2><h3 id='http-request-27'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/AddActiveGameGroups</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-editactivegamegroups'>/API/BETONGAMESCMS/EDITACTIVEGAMEGROUPS</h1><h2 id='post-25'><strong><em>POST</em></strong></h2><h3 id='http-request-28'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/EditActiveGameGroups</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-getactivegamegroups'>/API/BETONGAMESCMS/GETACTIVEGAMEGROUPS</h1><h2 id='post-26'><strong><em>POST</em></strong></h2><h3 id='http-request-29'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/GetActiveGameGroups</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-getallpartnercurrencies'>/API/BETONGAMESCMS/GETALLPARTNERCURRENCIES</h1><h2 id='post-27'><strong><em>POST</em></strong></h2><h3 id='http-request-30'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/GetAllPartnerCurrencies</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-getrateproviders'>/API/BETONGAMESCMS/GETRATEPROVIDERS</h1><h2 id='post-28'><strong><em>POST</em></strong></h2><h3 id='http-request-31'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/GetRateProviders</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-getpartnerdomains'>/API/BETONGAMESCMS/GETPARTNERDOMAINS</h1><h2 id='get-4'><strong><em>GET</em></strong></h2><h3 id='http-request-32'>HTTP Request</h3>
+<p><code>***GET*** /api/BetOnGamesCms/GetPartnerDomains</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-getactivegameinfo'>/API/BETONGAMESCMS/GETACTIVEGAMEINFO</h1><h2 id='get-5'><strong><em>GET</em></strong></h2><h3 id='http-request-33'>HTTP Request</h3>
+<p><code>***GET*** /api/BetOnGamesCms/GetActiveGameInfo</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-updatepartnerdomains'>/API/BETONGAMESCMS/UPDATEPARTNERDOMAINS</h1><h2 id='post-29'><strong><em>POST</em></strong></h2><h3 id='http-request-34'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/UpdatePartnerDomains</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-deletepartnerdomain'>/API/BETONGAMESCMS/DELETEPARTNERDOMAIN</h1><h2 id='post-30'><strong><em>POST</em></strong></h2><h3 id='http-request-35'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/DeletePartnerDomain</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-deletepartnerdomainbyname'>/API/BETONGAMESCMS/DELETEPARTNERDOMAINBYNAME</h1><h2 id='post-31'><strong><em>POST</em></strong></h2><h3 id='http-request-36'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/DeletePartnerDomainByName</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-addpartnerdomain'>/API/BETONGAMESCMS/ADDPARTNERDOMAIN</h1><h2 id='post-32'><strong><em>POST</em></strong></h2><h3 id='http-request-37'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/AddPartnerDomain</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-addpartnerdomainbyname'>/API/BETONGAMESCMS/ADDPARTNERDOMAINBYNAME</h1><h2 id='post-33'><strong><em>POST</em></strong></h2><h3 id='http-request-38'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/AddPartnerDomainByName</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-getresources'>/API/BETONGAMESCMS/GETRESOURCES</h1><h2 id='post-34'><strong><em>POST</em></strong></h2><h3 id='http-request-39'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/GetResources</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-updateresources'>/API/BETONGAMESCMS/UPDATERESOURCES</h1><h2 id='post-35'><strong><em>POST</em></strong></h2><h3 id='http-request-40'>HTTP Request</h3>
+<p><code>***POST*** /api/BetOnGamesCms/UpdateResources</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-getallgametypes'>/API/BETONGAMESCMS/GETALLGAMETYPES</h1><h2 id='get-6'><strong><em>GET</em></strong></h2><h3 id='http-request-41'>HTTP Request</h3>
+<p><code>***GET*** /api/BetOnGamesCms/GetAllGameTypes</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-getallgamenames'>/API/BETONGAMESCMS/GETALLGAMENAMES</h1><h2 id='get-7'><strong><em>GET</em></strong></h2><h3 id='http-request-42'>HTTP Request</h3>
+<p><code>***GET*** /api/BetOnGamesCms/GetAllGameNames</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='api-betongamescms-getallpartnersminbet'>/API/BETONGAMESCMS/GETALLPARTNERSMINBET</h1><h2 id='get-8'><strong><em>GET</em></strong></h2><h3 id='http-request-43'>HTTP Request</h3>
+<p><code>***GET*** /api/BetOnGamesCms/GetAllPartnersMinBet</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='cacheinitcontroller-updatecrashcache'>/CACHEINITCONTROLLER/UPDATECRASHCACHE</h1><h2 id='get-9'><strong><em>GET</em></strong></h2><h3 id='http-request-44'>HTTP Request</h3>
+<p><code>***GET*** /CacheInitController/UpdateCrashCache</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='cacheinitcontroller-updatekenoexpresscache'>/CACHEINITCONTROLLER/UPDATEKENOEXPRESSCACHE</h1><h2 id='get-10'><strong><em>GET</em></strong></h2><h3 id='http-request-45'>HTTP Request</h3>
+<p><code>***GET*** /CacheInitController/UpdateKenoExpressCache</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='cacheinitcontroller-updatekenocache'>/CACHEINITCONTROLLER/UPDATEKENOCACHE</h1><h2 id='get-11'><strong><em>GET</em></strong></h2><h3 id='http-request-46'>HTTP Request</h3>
+<p><code>***GET*** /CacheInitController/UpdateKenoCache</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='cacheinitcontroller-updatehilocache'>/CACHEINITCONTROLLER/UPDATEHILOCACHE</h1><h2 id='get-12'><strong><em>GET</em></strong></h2><h3 id='http-request-47'>HTTP Request</h3>
+<p><code>***GET*** /CacheInitController/UpdateHiLoCache</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='cacheinitcontroller-updatepenaltycache'>/CACHEINITCONTROLLER/UPDATEPENALTYCACHE</h1><h2 id='get-13'><strong><em>GET</em></strong></h2><h3 id='http-request-48'>HTTP Request</h3>
+<p><code>***GET*** /CacheInitController/UpdatePenaltyCache</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='cacheinitcontroller-updatesicbocache'>/CACHEINITCONTROLLER/UPDATESICBOCACHE</h1><h2 id='get-14'><strong><em>GET</em></strong></h2><h3 id='http-request-49'>HTTP Request</h3>
+<p><code>***GET*** /CacheInitController/UpdateSicBoCache</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='cacheinitcontroller-updateglobalinfocache'>/CACHEINITCONTROLLER/UPDATEGLOBALINFOCACHE</h1><h2 id='get-15'><strong><em>GET</em></strong></h2><h3 id='http-request-50'>HTTP Request</h3>
+<p><code>***GET*** /CacheInitController/UpdateGlobalInfoCache</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='cacheinitcontroller-updatepartnerdomains'>/CACHEINITCONTROLLER/UPDATEPARTNERDOMAINS</h1><h2 id='get-16'><strong><em>GET</em></strong></h2><h3 id='http-request-51'>HTTP Request</h3>
+<p><code>***GET*** /CacheInitController/UpdatePartnerDomains</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='cacheinitcontroller-updatemaxwinners'>/CACHEINITCONTROLLER/UPDATEMAXWINNERS</h1><h2 id='get-17'><strong><em>GET</em></strong></h2><h3 id='http-request-52'>HTTP Request</h3>
+<p><code>***GET*** /CacheInitController/UpdateMaxWinners</code> </p>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+<h1 id='cacheinitcontroller-init'>/CACHEINITCONTROLLER/INIT</h1><h2 id='get-18'><strong><em>GET</em></strong></h2><h3 id='http-request-53'>HTTP Request</h3>
+<p><code>***GET*** /CacheInitController/Init</code> </p>
+
+<p><strong>Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Located in</th>
+<th>Description</th>
+<th>Required</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>gameKind</td>
+<td>query</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Responses</strong></p>
+
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+</tbody></table>
+
+<!-- Converted with the swagger-to-slate https://github.com/lavkumarv/swagger-to-slate -->
 <h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
@@ -585,9 +1679,6 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>
     </div>
