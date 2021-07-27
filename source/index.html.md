@@ -1,665 +1,245 @@
---- 
+---
+title: API Reference
 
-title: My API 
+language_tabs: # must be one of https://git.io/vQNgJ
+  - shell
+  - ruby
+  - python
+  - javascript
 
-language_tabs: 
-   - shell 
+toc_footers:
+  - <a href='#'>Sign Up for a Developer Key</a>
+  - <a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a>
 
-toc_footers: 
-   - <a href='#'>Sign Up for a Developer Key</a> 
-   - <a href='https://github.com/lavkumarv'>Documentation Powered by lav</a> 
+includes:
+  - errors
 
-includes: 
-   - errors 
+search: true
 
-search: true 
+code_clipboard: true
 
---- 
+meta:
+  - name: description
+    content: Documentation for the Kittn API
+---
 
-# Introduction 
+# Introduction
 
-**Version:** v1 
+You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
 
-# /API/BETONGAMESCMS/GETENVIRONMENT
-## ***GET*** 
+We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
-### HTTP Request 
-`***GET*** /api/BetOnGamesCms/GetEnvironment` 
+This example API documentation page was created with [Slate](https://github.com/slatedocs/slate). Feel free to edit it and use it as a base for your own API's documentation.
 
-**Responses**
+# Authentication
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
+> To authorize, use this code:
 
-# /API/BETONGAMESCMS/ADDACTIVATEGAME
-## ***POST*** 
+```ruby
+require 'kittn'
 
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/AddActivateGame` 
+api = Kittn::APIClient.authorize!('meowmeowmeow')
+```
 
-**Responses**
+```python
+import kittn
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
+api = kittn.authorize('meowmeowmeow')
+```
 
-# /API/BETONGAMESCMS/GETPARTNERGROUPS
-## ***GET*** 
+```shell
+# With shell, you can just pass the correct header with each request
+curl "api_endpoint_here" \
+  -H "Authorization: meowmeowmeow"
+```
 
-### HTTP Request 
-`***GET*** /api/BetOnGamesCms/GetPartnerGroups` 
+```javascript
+const kittn = require('kittn');
 
-**Responses**
+let api = kittn.authorize('meowmeowmeow');
+```
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
+> Make sure to replace `meowmeowmeow` with your API key.
 
-# /API/BETONGAMESCMS/EDITGAME
-## ***POST*** 
+Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
 
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/EditGame` 
+Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
-**Responses**
+`Authorization: meowmeowmeow`
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
+<aside class="notice">
+You must replace <code>meowmeowmeow</code> with your personal API key.
+</aside>
 
-# /API/BETONGAMESCMS/ADDPARTNER
-## ***POST*** 
+# Kittens
 
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/AddPartner` 
+## Get All Kittens
 
-**Responses**
+```ruby
+require 'kittn'
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
+api = Kittn::APIClient.authorize!('meowmeowmeow')
+api.kittens.get
+```
 
-# /API/BETONGAMESCMS/EDITPARTNER
-## ***POST*** 
+```python
+import kittn
 
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/EditPartner` 
+api = kittn.authorize('meowmeowmeow')
+api.kittens.get()
+```
 
-**Responses**
+```shell
+curl "http://example.com/api/kittens" \
+  -H "Authorization: meowmeowmeow"
+```
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
+```javascript
+const kittn = require('kittn');
 
-# /API/BETONGAMESCMS/ALLPARTNERUNDERCONSTRACTION
-## ***POST*** 
+let api = kittn.authorize('meowmeowmeow');
+let kittens = api.kittens.get();
+```
 
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/AllPartnerUnderConstraction` 
+> The above command returns JSON structured like this:
 
-**Responses**
+```json
+[
+  {
+    "id": 1,
+    "name": "Fluffums",
+    "breed": "calico",
+    "fluffiness": 6,
+    "cuteness": 7
+  },
+  {
+    "id": 2,
+    "name": "Max",
+    "breed": "unknown",
+    "fluffiness": 5,
+    "cuteness": 10
+  }
+]
+```
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
+This endpoint retrieves all kittens.
 
-# /API/BETONGAMESCMS/EDITORREMOVEPARTNERUNDERCONSTRUCTION
-## ***POST*** 
+### HTTP Request
 
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/EditOrRemovePartnerUnderConstruction` 
+`GET http://example.com/api/kittens`
 
-**Responses**
+### Query Parameters
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
+Parameter | Default | Description
+--------- | ------- | -----------
+include_cats | false | If set to true, the result will also include cats.
+available | true | If set to false, the result will include kittens that have already been adopted.
 
-# /API/BETONGAMESCMS/ADDGAMESORPARTNERTOUNDERCOUNSTRUCTION
-## ***POST*** 
+<aside class="success">
+Remember — a happy kitten is an authenticated kitten!
+</aside>
 
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/AddGamesOrPartnerToUnderCounstruction` 
+## Get a Specific Kitten
 
-**Responses**
+```ruby
+require 'kittn'
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
+api = Kittn::APIClient.authorize!('meowmeowmeow')
+api.kittens.get(2)
+```
 
-# /API/BETONGAMESCMS/GETALLACTIVEGAMES
-## ***POST*** 
+```python
+import kittn
 
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/GetAllActiveGames` 
+api = kittn.authorize('meowmeowmeow')
+api.kittens.get(2)
+```
 
-**Responses**
+```shell
+curl "http://example.com/api/kittens/2" \
+  -H "Authorization: meowmeowmeow"
+```
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
+```javascript
+const kittn = require('kittn');
 
-# /API/BETONGAMESCMS/GETPARTNERSINFO
-## ***POST*** 
+let api = kittn.authorize('meowmeowmeow');
+let max = api.kittens.get(2);
+```
 
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/GetPartnersInfo` 
+> The above command returns JSON structured like this:
 
-**Responses**
+```json
+{
+  "id": 2,
+  "name": "Max",
+  "breed": "unknown",
+  "fluffiness": 5,
+  "cuteness": 10
+}
+```
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
+This endpoint retrieves a specific kitten.
 
-# /API/BETONGAMESCMS/GETBETLOGS
-## ***POST*** 
+<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/GetBetLogs` 
+### HTTP Request
 
-**Responses**
+`GET http://example.com/kittens/<ID>`
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
+### URL Parameters
 
-# /API/BETONGAMESCMS/GETBETLOGSREPORT
-## ***POST*** 
+Parameter | Description
+--------- | -----------
+ID | The ID of the kitten to retrieve
 
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/GetBetLogsReport` 
+## Delete a Specific Kitten
 
-**Responses**
+```ruby
+require 'kittn'
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
+api = Kittn::APIClient.authorize!('meowmeowmeow')
+api.kittens.delete(2)
+```
 
-# /API/BETONGAMESCMS/GETGAMELIST
-## ***POST*** 
+```python
+import kittn
 
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/GetGameList` 
+api = kittn.authorize('meowmeowmeow')
+api.kittens.delete(2)
+```
 
-**Responses**
+```shell
+curl "http://example.com/api/kittens/2" \
+  -X DELETE \
+  -H "Authorization: meowmeowmeow"
+```
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
+```javascript
+const kittn = require('kittn');
 
-# /API/BETONGAMESCMS/GETGAMELISTREPORT
-## ***POST*** 
+let api = kittn.authorize('meowmeowmeow');
+let max = api.kittens.delete(2);
+```
 
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/GetGameListReport` 
+> The above command returns JSON structured like this:
 
-**Responses**
+```json
+{
+  "id": 2,
+  "deleted" : ":("
+}
+```
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
+This endpoint deletes a specific kitten.
 
-# /API/BETONGAMESCMS/GETTIRAGEINFODETAILS
-## ***POST*** 
+### HTTP Request
 
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/GetTirageInfoDetails` 
+`DELETE http://example.com/kittens/<ID>`
 
-**Responses**
+### URL Parameters
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
+Parameter | Description
+--------- | -----------
+ID | The ID of the kitten to delete
 
-# /API/BETONGAMESCMS/GETTIRAGEINFOTICKETS
-## ***POST*** 
-
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/GetTirageInfoTickets` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/GETALLPARTNERSINFO
-## ***POST*** 
-
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/GetAllPartnersInfo` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/GETPARTNERCURRENCIES
-## ***GET*** 
-
-### HTTP Request 
-`***GET*** /api/BetOnGamesCms/GetPartnerCurrencies` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/GETPLAYERSGAME
-## ***POST*** 
-
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/GetPlayersGame` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/GETPLAYERSGAMEREPORT
-## ***POST*** 
-
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/GetPlayersGameReport` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/GETPLAYERTICKETS
-## ***POST*** 
-
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/GetPlayerTickets` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/GETPLAYERTICKETSREPORT
-## ***POST*** 
-
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/GetPlayerTicketsReport` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/GETALLPLAYERTICKETS
-## ***POST*** 
-
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/GetAllPlayerTickets` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/GETALLPLAYERTICKETSREPORT
-## ***POST*** 
-
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/GetAllPlayerTicketsReport` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/GETGAMEKINDIDBYPARTNERID
-## ***POST*** 
-
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/GetGameKindIdByPartnerId` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/ADDACTIVEGAMEGROUPS
-## ***POST*** 
-
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/AddActiveGameGroups` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/EDITACTIVEGAMEGROUPS
-## ***POST*** 
-
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/EditActiveGameGroups` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/GETACTIVEGAMEGROUPS
-## ***POST*** 
-
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/GetActiveGameGroups` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/GETALLPARTNERCURRENCIES
-## ***POST*** 
-
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/GetAllPartnerCurrencies` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/GETRATEPROVIDERS
-## ***POST*** 
-
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/GetRateProviders` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/GETPARTNERDOMAINS
-## ***GET*** 
-
-### HTTP Request 
-`***GET*** /api/BetOnGamesCms/GetPartnerDomains` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/GETACTIVEGAMEINFO
-## ***GET*** 
-
-### HTTP Request 
-`***GET*** /api/BetOnGamesCms/GetActiveGameInfo` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/UPDATEPARTNERDOMAINS
-## ***POST*** 
-
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/UpdatePartnerDomains` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/DELETEPARTNERDOMAIN
-## ***POST*** 
-
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/DeletePartnerDomain` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/DELETEPARTNERDOMAINBYNAME
-## ***POST*** 
-
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/DeletePartnerDomainByName` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/ADDPARTNERDOMAIN
-## ***POST*** 
-
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/AddPartnerDomain` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/ADDPARTNERDOMAINBYNAME
-## ***POST*** 
-
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/AddPartnerDomainByName` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/GETRESOURCES
-## ***POST*** 
-
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/GetResources` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/UPDATERESOURCES
-## ***POST*** 
-
-### HTTP Request 
-`***POST*** /api/BetOnGamesCms/UpdateResources` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/GETALLGAMETYPES
-## ***GET*** 
-
-### HTTP Request 
-`***GET*** /api/BetOnGamesCms/GetAllGameTypes` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/GETALLGAMENAMES
-## ***GET*** 
-
-### HTTP Request 
-`***GET*** /api/BetOnGamesCms/GetAllGameNames` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /API/BETONGAMESCMS/GETALLPARTNERSMINBET
-## ***GET*** 
-
-### HTTP Request 
-`***GET*** /api/BetOnGamesCms/GetAllPartnersMinBet` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /CACHEINITCONTROLLER/UPDATECRASHCACHE
-## ***GET*** 
-
-### HTTP Request 
-`***GET*** /CacheInitController/UpdateCrashCache` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /CACHEINITCONTROLLER/UPDATEKENOEXPRESSCACHE
-## ***GET*** 
-
-### HTTP Request 
-`***GET*** /CacheInitController/UpdateKenoExpressCache` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /CACHEINITCONTROLLER/UPDATEKENOCACHE
-## ***GET*** 
-
-### HTTP Request 
-`***GET*** /CacheInitController/UpdateKenoCache` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /CACHEINITCONTROLLER/UPDATEHILOCACHE
-## ***GET*** 
-
-### HTTP Request 
-`***GET*** /CacheInitController/UpdateHiLoCache` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /CACHEINITCONTROLLER/UPDATEPENALTYCACHE
-## ***GET*** 
-
-### HTTP Request 
-`***GET*** /CacheInitController/UpdatePenaltyCache` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /CACHEINITCONTROLLER/UPDATESICBOCACHE
-## ***GET*** 
-
-### HTTP Request 
-`***GET*** /CacheInitController/UpdateSicBoCache` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /CACHEINITCONTROLLER/UPDATEGLOBALINFOCACHE
-## ***GET*** 
-
-### HTTP Request 
-`***GET*** /CacheInitController/UpdateGlobalInfoCache` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /CACHEINITCONTROLLER/UPDATEPARTNERDOMAINS
-## ***GET*** 
-
-### HTTP Request 
-`***GET*** /CacheInitController/UpdatePartnerDomains` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /CACHEINITCONTROLLER/UPDATEMAXWINNERS
-## ***GET*** 
-
-### HTTP Request 
-`***GET*** /CacheInitController/UpdateMaxWinners` 
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-# /CACHEINITCONTROLLER/INIT
-## ***GET*** 
-
-### HTTP Request 
-`***GET*** /CacheInitController/Init` 
-
-**Parameters**
-
-| Name | Located in | Description | Required | Type |
-| ---- | ---------- | ----------- | -------- | ---- |
-| gameKind | query |  | No |  |
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | Success |
-
-<!-- Converted with the swagger-to-slate https://github.com/lavkumarv/swagger-to-slate -->
